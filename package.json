@@ -1,0 +1,26 @@
+{
+  "name": "node-todo",
+  "version": "1.0.0",
+  "description": "node todo",
+  "main": "public/app.js",
+  "scripts": {
+    "start": "nodemon public/app.js",
+    "build": "node public/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/noo8xl/node-todo.git"
+  },
+  "author": "noo8xl",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/noo8xl/node-todo/issues"
+  },
+  "homepage": "https://gitlab.com/noo8xl/node-todo#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.1",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  }
+}

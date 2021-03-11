@@ -1,0 +1,19 @@
+<div class="box_name title_text">
+  let's go to edit ur task:
+</div>
+
+<form action="/tasks/edit" class="new_task_form" method="post">
+  <label for="task_name">
+    <input class="new_task_form_input" type="text" name="name" value="{{todos.name}}">
+  </label>
+  <label class="new_task_form_label" for="add_task">
+    <input class="new_task_form_input" id="add_task" type="text" name="task" value="{{todos.task}}" >
+  </label>
+  <input type="hidden" name="id" value="{{todos.id}}">
+
+  <div class="wrapper">
+    <button class="new_task_form_btn" type="submit" name="add_btn">done</button>
+  </div>
+</form>
+
+<a href="/tasks" class="back_to_btn go_to_btn" >cancel</a>

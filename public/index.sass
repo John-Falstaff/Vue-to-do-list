@@ -1,0 +1,218 @@
+// base settings
+
+// fonts
+@mixin lato_b
+  font-family: 'Lato', sans-serif
+  font-weight: 700
+
+@mixin lato_r
+  font-family: 'Lato', sans-serif
+  font-weight: 400
+
+// colors
+$white: #ffffff
+$black: #000000
+$grey: #cecece
+$blue: #9595ec
+$red: #FF0000
+$green: #00f500
+
+body
+  margin: 0
+  padding: 0
+
+.container
+  width: 1000px
+  margin: 0 auto
+
+.title_text
+  @include lato_b
+  font-size: 32px
+  text-align: center
+  margin-top: 50px
+  color: $black
+
+.sub_text
+  @include lato_r
+  font-size: 16px
+  color: $grey
+
+input,
+button
+  @include lato_r
+  font-size: 16px
+  padding: 16px
+  border-radius: 6px
+  outline: none
+  border: 1px solid $grey
+
+.go_to_btn
+  @include lato_r
+  font-size: 16px
+  padding: 16px
+  width: 160px
+  height: 20px
+  border-radius: 6px
+  outline: none
+  border: 1px solid $grey
+  background-color: $green
+  margin-right: 20px
+  display: block
+  text-decoration: none
+  color: $white
+  margin-top: 10px
+  text-align: center
+  &:hover
+    background-color: darken($green, 5%)
+    transition: background-color 0.7s ease
+
+input
+  &:focus
+    box-shadow: 1px 2px 10px $grey
+
+button
+  &:hover
+    cursor: pointer
+    box-shadow: 1px 2px 10px $grey
+
+
+// main styles
+
+.main_box
+  display: block
+  flex-direction: column
+  justify-content: center
+
+.app_name
+  margin-bottom: 10px
+
+
+.image
+  width: 30%
+  height: 230px
+  img
+    width: 100%
+    z-index: 1
+
+.wrapper
+  display: flex
+  justify-content: space-between
+
+.new_task_form
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 50px
+  width: 60%
+  label
+    width: 90%
+  &_input
+    width: 100%
+    margin-bottom: 8px
+    &:focus
+      transition: 1s ease
+  .go_to_btn
+    background-color: $green
+    margin-right: 20px
+    display: block
+    text-decoration: none
+    color: $white
+    &:hover
+      background-color: darken($green, 5%)
+      transition: background-color 0.7s ease
+  &_btn
+
+    margin-top: 10px
+    color: $white
+    background-color: $blue
+    &:hover
+      background-color: darken($blue, 10%)
+      transition: background-color 0.7s ease
+
+
+
+// tasks page
+
+.task
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  border: 1px solid $grey
+  border-radius: 6px
+  margin-bottom: 10px
+  padding: 15px
+  margin-top: 30px
+
+.buttons_wrapper
+  display: flex
+  justify-content: flex-end
+  align-items: center
+
+.todo_name,
+.todo_task
+  color: $black
+
+.todo_name
+  font-size: 20px
+
+.todo_task
+  font-size: 14px
+  margin-top: 5px
+
+.del_btn,
+.edit_btn
+  margin-top: 0
+  width: 60px
+
+.del_btn
+  background-color: $red
+  padding: 16px
+  &:hover
+    cursor: pointer
+    background-color: darken($red, 8%)
+    transition: background-color 0.7s ease
+
+.back_to_btn
+  background-color: $grey
+  &:hover
+    box-shadow: 1px 2px 10px $grey
+    background-color: darken($grey, 15%)
+
+// footer text
+
+.copyright
+  @include lato_r
+  font-size: 12px
+  text-align: right
+  margin-top: 50px
+
+.hide
+  opacity: 0
+  transform: translateX(800px)
+  transition: 1s ease
+
+.del
+  display: none
+
+.tasks_box
+  max-height: 81vh
+  overflow-y: scroll
+
+.img_wrapper
+  margin: 30px auto 0 auto
+  width: 200px
+
+  img
+    width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
