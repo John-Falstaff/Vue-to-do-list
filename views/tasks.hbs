@@ -1,35 +1,34 @@
-
 <div class="box_name title_text">
   {{#if todos.length}}
-    ur tasks:
+  ur tasks:
   {{else}}
-    no tasks here =(
+  no tasks here =(
   {{/if}}
 </div>
 
 {{#if todos.length}}
 
 {{else}}
-  <div class="img_wrapper">
-    <img src="/images/Screenshot 2021-02-25 at 15.09.51.png" alt="">
-  </div>
+<div class="img_wrapper">
+  <img src="/images/Screenshot 2021-02-25 at 15.09.51.png" alt="">
+</div>
 
 {{/if}}
 
 <div class="tasks_box">
   {{#each todos}}
-    <div class="task">
-      <div class="task_wrapper">
-        <div class="todo_name sub_text">{{this.name}}</div>
-        <div class="todo_task sub_text">{{this.task}}</div>
-      </div>
-      <div class="buttons_wrapper">
-        <a href="/tasks/{{id}}/edit?allow=true" class="go_to_btn edit_btn" >EDIT</a>
-        <span class="go_to_btn del_btn" >DELETE</span>
-      </div>
+  <div class="task">
+    <div class="task_wrapper">
+      <div class="todo_name sub_text">{{this.name}}</div>
+      <div class="todo_task sub_text">{{this.task}}</div>
     </div>
+    <div class="buttons_wrapper">
+      <a href="/tasks/{{id}}/edit?allow=true" class="go_to_btn edit_btn">EDIT</a>
+      <button class="go_to_btn del_btn delete_task" data-id="{{id}}">DELETE</button>
+    </div>
+  </div>
 
   {{/each}}
 
 </div>
-<a href="/" class="back_to_btn go_to_btn">go to home <=</a>
+<a href="/" class="back_to_btn go_to_btn">go to home</a>

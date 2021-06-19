@@ -40,7 +40,7 @@ button {
   font-weight: 400;
   font-size: 16px;
   padding: 16px;
-  width: 160px;
+  width: 120px;
   height: 20px;
   border-radius: 6px;
   outline: none;
@@ -163,12 +163,12 @@ button:hover {
 .del_btn,
 .edit_btn {
   margin-top: 0;
-  width: 60px;
 }
 
 .del_btn {
   background-color: #FF0000;
-  padding: 16px;
+  width: 160px;
+  height: 54px;
 }
 .del_btn:hover {
   cursor: pointer;
@@ -213,6 +213,4 @@ button:hover {
 }
 .img_wrapper img {
   width: 100%;
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
